@@ -15,7 +15,7 @@ public class BoardData
 public class CellUnit
 {
     public Position pos;
-    public ItemData itemData;
+    public CellData itemData;
 }
 
 [Serializable]

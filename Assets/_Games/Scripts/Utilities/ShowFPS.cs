@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class ShowFPS : MonoBehaviour
 {
+    void Awake()
+    {
+        Application.targetFrameRate = 60;
+    }
+
     // Update is called once per frame
     void Update()
     {

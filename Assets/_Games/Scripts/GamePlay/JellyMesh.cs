@@ -17,6 +17,11 @@ public class JellyMesh : MonoBehaviour
 
     void Awake()
     {
+        
+    }
+
+    void Start()
+    {
         _originalMesh = GetComponent<MeshFilter>().sharedMesh;
         _meshClone = Instantiate(_originalMesh);
         GetComponent<MeshFilter>().mesh = _meshClone;
@@ -39,13 +44,13 @@ public class JellyMesh : MonoBehaviour
         Debug.LogWarning($"MeshFilter ID: {meshFilter.sharedMesh.GetInstanceID()}");
         Debug.LogWarning($"MeshFilter instance ID: {meshFilter.mesh.GetInstanceID()}");
 
-        var meshSlice = GetComponent<MeshSlices.MeshSlice>();
+        var meshSlice = GetComponent<MeshSlice>();
         Debug.LogError($"MeshSlice ID: {meshSlice.originalMesh.GetInstanceID()}");
         Debug.LogError($"MeshSlice instance ID: {meshSlice.instance.GetInstanceID()}");
 
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
         _vertexArray = _originalMesh.vertices;
         for (int i = 0; i < _jv.Length; i++)
