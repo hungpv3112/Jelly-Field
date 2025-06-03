@@ -143,9 +143,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _intensity: 1
-  _mass: 1
+  _mass: 100
   _damping: 0.75
-  _stiffness: 1
+  _stiffness: 20
 --- !u!114 &8553242937575939401
 MonoBehaviour:
   m_ObjectHideFlags: 0

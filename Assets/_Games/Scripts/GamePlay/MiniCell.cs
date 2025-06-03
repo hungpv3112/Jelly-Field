@@ -12,6 +12,9 @@ public class MiniCell : MonoBehaviour
         return _indexes;
     }
 
+    private int _colorIndex = 0;
+    public int ColorIndex => _colorIndex;    
+
     void Awake()
     {
         if (_meshRenderer == null)
@@ -21,12 +24,13 @@ public class MiniCell : MonoBehaviour
     }
 
 
-    public void SetMaterial(Material material)
+    public void SetMaterial(Material material, int colorIndex)
     {
         if (_meshRenderer != null)
         {
             _meshRenderer.material = material;
         }
+        _colorIndex = colorIndex;
     }
 
     public void SetIndexes(List<int> indexes)

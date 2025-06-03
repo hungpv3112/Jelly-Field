@@ -134,7 +134,7 @@ public class Cell : MonoBehaviour
             DOTween.To(() => meshSlice.x3, x => meshSlice.x3 = x, 0.061f, timeTween);
             DOTween.To(() => meshSlice.z2, x => meshSlice.z2 = x, -0.061f, timeTween);
             DOTween.To(() => meshSlice.z3, x => meshSlice.z3 = x, 0.061f, timeTween);
-            var id = miniCell.GetIndexes()[0];
+            var id = miniCell.ColorIndex;
             _data.itemIds = new List<int>() { id, id, id, id };
             miniCell.SetIndexes(new List<int>() { 0, 1, 2, 3 });
         }
@@ -177,7 +177,7 @@ public class Cell : MonoBehaviour
                             DOTween.To(() => meshSlice.x3, x => meshSlice.x3 = x, 0.061f, timeTween);
                         }
                         miniCell.GetIndexes().Add(item);
-                        _data.itemIds[item] = miniCell.GetIndexes()[0];
+                        _data.itemIds[item] = _data.itemIds[indexNeighbor];
                         break;
                     }
                 }
@@ -209,7 +209,7 @@ public class Cell : MonoBehaviour
                     DOTween.To(() => meshSlice.x3, x => meshSlice.x3 = x, 0.061f, timeTween);
                 }
                 miniCell.GetIndexes().Add(indexesToClear[0]);
-                _data.itemIds[indexesToClear[0]] = miniCell.GetIndexes()[0];
+                _data.itemIds[indexesToClear[0]] = _data.itemIds[indexNeighbor];
                 break;
             }
         }
@@ -369,7 +369,7 @@ public class Cell : MonoBehaviour
             meshSlice.z3 = scale.w;
             meshSlice.Slice();
 
-            miniCell.SetMaterial(MaterialsContainer.Instance.GetMaterial(id));
+            miniCell.SetMaterial(MaterialsContainer.Instance.GetMaterial(id), id);
             miniCells.Add(miniCell);
             return miniCell;
         }
