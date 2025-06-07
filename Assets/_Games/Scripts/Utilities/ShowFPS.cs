@@ -9,6 +9,11 @@ public class ShowFPS : MonoBehaviour
         Application.targetFrameRate = 60;
     }
 
+    void Start()
+    {
+        Debug.LogError($"Application.targetFrameRate: {Application.targetFrameRate}");
+    }
+
     // Update is called once per frame
     void Update()
     {

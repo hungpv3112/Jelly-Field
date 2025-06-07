@@ -1,0 +1,744 @@
+fileFormatVersion: 2
+guid: b2ff68c5cb014a445a8c59d804a5cfde
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 47
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 0
+  flipbookColumns: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Win64
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1886
+        width: 161
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf57cce712c37a64f83d37547b274b55
+      internalID: -1258969534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_1
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 1886
+        width: 161
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a723b217ce7a2124b849d3ddfcb6130b
+      internalID: -97643994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_2
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1886
+        width: 161
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438f16a828e3a984e9b06c3f628bcad2
+      internalID: 1456970902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_3
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1886
+        width: 161
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bb3c48240b57b24497bf35068a56994
+      internalID: -1861876130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_4
+      rect:
+        serializedVersion: 2
+        x: 790
+        y: 1881
+        width: 1160
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca3764403b73b74597168d803fe9efb
+      internalID: -425773959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 1520
+        width: 1500
+        height: 364
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ffa9e9bff8a2db49a1df6dd6b236918
+      internalID: -1528300452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_6
+      rect:
+        serializedVersion: 2
+        x: 1008
+        y: 1876
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44cc0cd101a436a459f9f5898b54af54
+      internalID: -914861899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_7
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1796
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66ab018f57ce00244a874093e18aa91a
+      internalID: 1341056737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_8
+      rect:
+        serializedVersion: 2
+        x: 1508
+        y: 1652
+        width: 452
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41bc46f00dffa4e4ba9f4e01c864ac68
+      internalID: 1718886063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1768
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40342948bb00c6f4c936cc3a14134720
+      internalID: -780311278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1760
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f1e7604a7341e4f8bb4ecd50f2b991
+      internalID: 492978684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_11
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1068
+        height: 1552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6558c4f61f620344bbb6b1b8df52fba
+      internalID: 73716348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_12
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1155
+        width: 321
+        height: 315
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033ff564e3bb09847a73cf780b474fa2
+      internalID: -1266081235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_13
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 1431
+        width: 367
+        height: 241
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c78c2c19abcefd9419653ff4197a0e6e
+      internalID: -1586755022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_14
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 806
+        width: 764
+        height: 350
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9516a66066ca5474796183fa8a7c278c
+      internalID: 1398876536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_15
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 1153
+        width: 410
+        height: 271
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3033a2776c4fa7a4dae009d20485c88a
+      internalID: -1379128192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_16
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 430
+        width: 329
+        height: 377
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5300347e299210c47b6c3de948776458
+      internalID: -852561612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_17
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 392
+        width: 370
+        height: 272
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4447cfc7cb7e6e04ba50ce0642b44bec
+      internalID: 534630147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_18
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 388
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e747d5ab214f6ce4f808de2481d21628
+      internalID: 323332855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_19
+      rect:
+        serializedVersion: 2
+        x: 1356
+        y: 417
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691f86ec7b3b5174b96dbedb0d794318
+      internalID: -1887620250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_20
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 3
+        width: 352
+        height: 401
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5dbd5ce3269d0e40bc493b53ca70374
+      internalID: -1300252886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_21
+      rect:
+        serializedVersion: 2
+        x: 1281
+        y: 260
+        width: 124
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a42c116af9bba4cba378d62bb1bddb
+      internalID: -2059717566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_22
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 0
+        width: 344
+        height: 385
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f4c5601a72737945be2fa08c10bf38f
+      internalID: -640266166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_23
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 229
+        height: 275
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d63fc76d8932ad842b4d08fcde745f75
+      internalID: -1057602354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_24
+      rect:
+        serializedVersion: 2
+        x: 1408
+        y: 68
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ede582748e96b04f9a9cd689ba39f46
+      internalID: -11008608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8f1a934c6a7f5904cb6bdd2cbf88bd7a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_0: -1258969534
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_1: -97643994
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_10: 492978684
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_11: 73716348
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_12: -1266081235
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_13: -1586755022
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_14: 1398876536
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_15: -1379128192
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_16: -852561612
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_17: 534630147
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_18: 323332855
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_19: -1887620250
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_2: 1456970902
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_20: -1300252886
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_21: -2059717566
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_22: -640266166
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_23: -1057602354
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_24: -11008608
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_3: -1861876130
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_4: -425773959
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_5: -1528300452
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_6: -914861899
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_7: 1341056737
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_8: 1718886063
+      sactx-1-2048x2048-ETC2-Atlas Race Event-4e394c6f_9: -780311278
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

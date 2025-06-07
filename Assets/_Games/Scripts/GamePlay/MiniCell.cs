@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
@@ -31,6 +32,28 @@ public class MiniCell : MonoBehaviour
             _meshRenderer.material = material;
         }
         _colorIndex = colorIndex;
+    }
+
+    public void Highlight()
+    {
+        if (_meshRenderer != null)
+        {
+            _meshRenderer.material = MaterialsContainer.Instance.GetMaterialHighlighted(_colorIndex);
+            transform.DOScale(13.5f, 0.2f);
+            transform.DOLocalMoveY(0.6f, 0.2f)
+                .SetEase(Ease.OutBack);
+        }
+    }
+
+    public void UnHighlight()
+    {
+        if (_meshRenderer != null)
+        {
+            _meshRenderer.material = MaterialsContainer.Instance.GetMaterial(_colorIndex);
+        }
+        transform.localScale = Vector3.one * 13;
+        transform.localPosition = new Vector3(transform.localPosition.x, 0.53f, transform.localPosition.z);
+        DOTween.Kill(transform);
     }
 
     public void SetIndexes(List<int> indexes)

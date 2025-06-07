@@ -64,7 +64,7 @@ public class Cell : MonoBehaviour
     }
 
     [Button]
-    public void ClearMiniCell1(List<int> indexs)
+    public void ClearMiniCell(List<int> indexs)
     {
         // Tìm miniCell có chứa index cần clear
         List<MiniCell> miniCellsToClear = new List<MiniCell>();
@@ -231,7 +231,7 @@ public class Cell : MonoBehaviour
                 }
             }
         }
-        ClearMiniCell1(indexesRemove);
+        ClearMiniCell(indexesRemove);
     }
 
     [Button]

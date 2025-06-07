@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ItemQueueManager : MonoBehaviour
 {
+    public GameObject highlightCell;
+
     [SerializeField] private Cell _cellPrefab;
 
     public List<ItemQueue> itemQueues;
@@ -23,6 +25,8 @@ public class ItemQueueManager : MonoBehaviour
         {
             GenNewCell(itemQueue);
         }
+
+        highlightCell.SetActive(false);
     }
 
     private void GenNewCell(ItemQueue itemQueue)
@@ -40,6 +44,9 @@ public class ItemQueueManager : MonoBehaviour
         }
     }
 
+
+    private Vector3? _currentPosCanPut;
+    private List<MiniCell> _miniCellsHighlighted = new List<MiniCell>();
     void Update()
     {
         if (Input.GetMouseButtonDown(0))
@@ -47,6 +54,7 @@ public class ItemQueueManager : MonoBehaviour
             RaycastToFindItemQueue();
             if (_currentCell != null)
             {
+                AudioController.PlaySound(SoundKind.Touch);
                 _zOffset = 0;
                 _posClicked = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 _posStarted = _currentCell.transform.position;
@@ -64,10 +72,57 @@ public class ItemQueueManager : MonoBehaviour
             pos.y = 1;
             pos.z += _zOffset; // Ensure the z position is zero
             _currentCell.transform.position = pos;
+
+            var (posCanPut, row, col) = BoardManager.Instance.CanPutCell(_currentCell);
+            if (posCanPut != null)
+            {
+                highlightCell.SetActive(true);
+                highlightCell.transform.position = (Vector3)posCanPut;
+                if (_currentPosCanPut != posCanPut)
+                {
+                    _currentPosCanPut = posCanPut;
+                    if (_miniCellsHighlighted.Count > 0)
+                    {
+                        foreach (var item in _miniCellsHighlighted)
+                        {
+                            item.UnHighlight();
+                        }
+                        _miniCellsHighlighted.Clear();
+                    }
+
+                    var miniCells = BoardManager.Instance.CheckMerge(_currentCell, col, row);
+                    if (miniCells != null)
+                    {
+                        _miniCellsHighlighted = miniCells;
+                        foreach (var item in miniCells)
+                        {
+                            item.Highlight();
+                        }
+                    }
+
+                }
+            }
+            else
+            {
+                _currentPosCanPut = null;
+                highlightCell.SetActive(false);
+                if (_miniCellsHighlighted.Count > 0)
+                {
+                    foreach (var item in _miniCellsHighlighted)
+                    {
+                        item.UnHighlight();
+                    }
+                    _miniCellsHighlighted.Clear();
+                }
+            }
         }
 
         if (Input.GetMouseButtonUp(0) && _currentCell != null)
         {
+            _miniCellsHighlighted.Clear();
+            _currentPosCanPut = null;
+            highlightCell.SetActive(false); // Hide the highlight cell when mouse button is released
+            AudioController.PlaySound(SoundKind.Return);
             if (BoardManager.Instance.PutCell(_currentCell))
             {
                 _currentCell = null;

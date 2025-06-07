@@ -36,12 +36,6 @@ public class BoardManager : Singleton<BoardManager>
         {
             for (int x = 0; x < cols; x++)
             {
-                // GameObject cellObj = Instantiate(cellPrefab, boardParent);
-                // cellObj.transform.localPosition = new Vector3(x * cellSize, y * -cellSize, 0);
-                // Cell cell = cellObj.GetComponent<Cell>();
-                // cell.Init(x, y, this);
-                // cells[y, x] = cell;
-
                 GameObject floor = Instantiate(floorPrefab, boardParent);
                 floor.transform.localPosition = new Vector3(x * cellSize - offsetX, 0, y * cellSize - offsetZ);
             }
@@ -61,6 +55,35 @@ public class BoardManager : Singleton<BoardManager>
         return cellGird[row].cells[col] == null;
     }
 
+    public (Vector3? pos, int row, int col) CanPutCell(Cell cell)
+    {
+        float minDist = float.MaxValue;
+        Vector3? targetPosition = null;
+
+        Vector3 cellPos = cell.transform.position;
+
+        int rowR = -1, colR = -1;
+        // Tìm ô gần nhất trong board
+        for (int row = 0; row < rows; row++)
+        {
+            for (int col = 0; col < cols; col++)
+            {
+                Vector3 gridPos = GetPosition(row, col);
+                cellPos.y = 0;
+                float dist = Vector3.Distance(cellPos, gridPos);
+                if (dist <= 2f && IsCellEmpty(row, col) && dist < minDist)
+                {
+                    minDist = dist;
+                    targetPosition = gridPos;
+                    rowR = row;
+                    colR = col;
+                }
+            }
+        }
+
+        return (targetPosition, rowR, colR); // Trả về vị trí tìm được
+    }
+
     public bool PutCell(Cell cell)
     {
         float minDist = float.MaxValue;
@@ -76,7 +99,7 @@ public class BoardManager : Singleton<BoardManager>
                 Vector3 gridPos = GetPosition(row, col);
                 cellPos.y = 0;
                 float dist = Vector3.Distance(cellPos, gridPos);
-                if (dist <= 1f && IsCellEmpty(row, col) && dist < minDist)
+                if (dist <= 2f && IsCellEmpty(row, col) && dist < minDist)
                 {
                     minDist = dist;
                     targetRow = row;
@@ -106,6 +129,7 @@ public class BoardManager : Singleton<BoardManager>
     Dictionary<int, List<MiniCell>> miniCellToRemoveByColor = new Dictionary<int, List<MiniCell>>();
     public void CheckMerge(List<Cell> cells)
     {
+        miniCellToRemoveByColor.Clear();
         miniCellToRemove.Clear();
         foreach (var cell in cells)
         {
@@ -140,7 +164,14 @@ public class BoardManager : Singleton<BoardManager>
                 }
             }
 
-            match.Key.ClearMiniCell1(indexesRemove);
+            this.Delay(0.25f, () =>
+            {
+                if (match.Key != null && match.Key.gameObject.activeSelf)
+                {
+                    match.Key.ClearMiniCell(indexesRemove);
+                }
+            });
+
             foreach (var item in match.Value)
             {
                 if (item != null && item.gameObject.activeSelf)
@@ -152,6 +183,46 @@ public class BoardManager : Singleton<BoardManager>
                     if (miniCellToRemoveByColor[item.ColorIndex].Contains(item) == false)
                     {
                         miniCellToRemoveByColor[item.ColorIndex].Add(item);
+                    }
+                }
+            }
+        }
+
+        foreach (var color in miniCellToRemoveByColor)
+        {
+            if (color.Value.Count > 0)
+            {
+                var avgPosition = Vector3.zero;
+                foreach (var miniCell in color.Value)
+                {
+                    if (miniCell != null && miniCell.gameObject.activeSelf)
+                    {
+                        avgPosition += miniCell.transform.position;
+                    }
+                }
+                avgPosition /= color.Value.Count;
+
+                this.Delay(0.1f, () =>
+                {
+                    FxSpawner.Instance.SpawnFx(avgPosition, color.Key);
+                    AudioController.PlaySound(SoundKind.Merge);
+                });
+                foreach (var miniCell in color.Value)
+                {
+                    if (miniCell != null && miniCell.gameObject.activeSelf)
+                    {
+                        miniCell.transform.DOMove(avgPosition, 0.2f).SetEase(Ease.InQuad);
+                        miniCell.transform.DOScale(Vector3.zero, 0.2f).SetEase(Ease.InQuad).OnComplete(() =>
+                        {
+                            miniCell.gameObject.SetActive(false);
+                            this.Delay(0.5f, () =>
+                            {
+                                if (miniCell != null)
+                                {
+                                    Destroy(miniCell.gameObject);
+                                }
+                            });
+                        });
                     }
                 }
             }
@@ -239,9 +310,81 @@ public class BoardManager : Singleton<BoardManager>
 
     }
 
+    [Button]
+    public List<MiniCell> CheckMerge(Cell currentCell, int col, int row)
+    {
+        if (currentCell == null) return null;
+
+        miniCellToRemove.Clear();
+        List<MiniCell> miniCellsToRemove = new List<MiniCell>();
+
+        // Kiểm tra ô bên dưới
+        if (row > 0)
+        {
+            Cell botCell = cellGird[row - 1].cells[col];
+            if (botCell != null)
+            {
+                FindMatchingColors(currentCell, botCell, 0, 2, miniCellToRemove);
+                FindMatchingColors(currentCell, botCell, 1, 3, miniCellToRemove);
+            }
+        }
+
+        // Kiểm tra ô bên trên
+        if (row < rows - 1)
+        {
+            Cell topCell = cellGird[row + 1].cells[col];
+            if (topCell != null)
+            {
+                FindMatchingColors(currentCell, topCell, 2, 0, miniCellToRemove);
+                FindMatchingColors(currentCell, topCell, 3, 1, miniCellToRemove);
+            }
+        }
+
+        // Kiểm tra ô bên trái
+        if (col > 0)
+        {
+            Cell leftCell = cellGird[row].cells[col - 1];
+            if (leftCell != null)
+            {
+                FindMatchingColors(currentCell, leftCell, 0, 1, miniCellToRemove);
+                FindMatchingColors(currentCell, leftCell, 2, 3, miniCellToRemove);
+            }
+        }
+
+        // Kiểm tra ô bên phải
+        if (col < cols - 1)
+        {
+            Cell rightCell = cellGird[row].cells[col + 1];
+            if (rightCell != null)
+            {
+                FindMatchingColors(currentCell, rightCell, 1, 0, miniCellToRemove);
+                FindMatchingColors(currentCell, rightCell, 3, 2, miniCellToRemove);
+            }
+        }
+
+        foreach (var item in miniCellToRemove)
+        {
+            if (item.Value != null && item.Value.Count > 0)
+            {
+                foreach (var miniCell in item.Value)
+                {
+                    if (miniCell != null && miniCell.gameObject.activeSelf)
+                    {
+                        miniCellsToRemove.Add(miniCell);
+                    }
+                }
+            }
+        }
+
+        miniCellToRemove.Clear();
+
+        return miniCellsToRemove;
+
+    }
+
     private void FindMatchingColors(Cell cell1, Cell cell2, int miniCellIndex1, int miniCellIndex2, Dictionary<Cell, List<MiniCell>> miniCellToRemove)
     {
-       
+
         // Lấy id màu để so sánh
         var id1 = cell1.Data.itemIds[miniCellIndex1];
         var id2 = cell2.Data.itemIds[miniCellIndex2];

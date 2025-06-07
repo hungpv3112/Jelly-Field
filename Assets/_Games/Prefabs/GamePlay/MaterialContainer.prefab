@@ -53,3 +53,12 @@ MonoBehaviour:
   - {fileID: 2100000, guid: c9de3c62b8940f045bbb7ff8d8a47e1c, type: 2}
   - {fileID: 2100000, guid: d7fd9551ecbfa3a4fa340c22033642f3, type: 2}
   - {fileID: 2100000, guid: 943b477785e10e044be476e7f5676d61, type: 2}
+  materialsHighlighted:
+  - {fileID: 2100000, guid: 97a36d1b9e9563946aa2598529195a5f, type: 2}
+  - {fileID: 2100000, guid: 131c05841e626df4dbeebc2bf5a18120, type: 2}
+  - {fileID: 2100000, guid: 0d5278244acba75488af2090f2757d21, type: 2}
+  - {fileID: 2100000, guid: 481d98142ac7d534a85201130f70fbf9, type: 2}
+  - {fileID: 2100000, guid: d19e8a0d1ebe52f449c638f7b69390c5, type: 2}
+  - {fileID: 2100000, guid: 5406157291366fb4a85ecd70e548caed, type: 2}
+  - {fileID: 2100000, guid: c2da0bddebb2e024aa1df7a6abe14a7e, type: 2}
+  - {fileID: 2100000, guid: 614877667d88d99418824cd4ed9ab074, type: 2}
